@@ -95,7 +95,7 @@ class Home extends Component {
 
                     {
                         multi_block.map((item, index) => (
-                            <div key={item.child[0].pic} >
+                            <div key={item.child[0].pic}  onClick={this.handleTo.bind(this,index)} >
                                 <img src={item.child[0].pic} alt="" />
                             </div>
                         ))
@@ -151,6 +151,19 @@ class Home extends Component {
 
             </Fragment>
         )
+    }
+    handleTo(index){
+      if(index==0){
+
+      }else if(index==1){
+
+      }else if(index=2){
+        this.props.history.push("/brandSale")
+      }else{
+
+      }
+        
+       
     }
    
 }

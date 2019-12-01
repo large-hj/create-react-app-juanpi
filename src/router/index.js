@@ -6,6 +6,14 @@ import {
     Login,
     Shop,ShopFirst,ShopSecond,ShopThird,
     Details,
+    SmallLogin,
+    SmallRegister,
+    BrandSale,
+    BeautyMakeup,
+    Handpik,
+    Shoe,
+    Mandress,
+    Womenadress
 
 } from "pages"
 
@@ -45,7 +53,25 @@ export const TabBarRoute = [
             flag:true
         },
         icon:"\ue66c",
-        text:"分类"
+        text:"分类",
+        children:[
+
+            {
+                path:"/classify/womenadress",
+                component:Womenadress,
+               
+                meta:{
+                    flag:true,
+                }
+            },
+            {
+                path:"/classify/mandress",
+                component:Mandress,
+                meta:{
+                    flag:true,
+                }
+            },
+        ]
     },
     {
         path:"/buycar",
@@ -69,10 +95,64 @@ export const TabBarRoute = [
 ];
 
 export const NoTabBarRoute = [
+     //品牌特卖
+    {
+        path:"/brandSale",
+        component:BrandSale,
+        text:"商品特卖",
+        meta:{
+            flag:true,
+            requiredAuth:true
+        },
+        children:[
+            {
+                path:"/brandSale/beautyMakeup",
+                component:BeautyMakeup,
+                meta:{
+                    flag:true,
+                    
+                },
+            },
+            {
+                path:"/brandSale/handpik",
+                component:Handpik,
+                meta:{
+                    flag:true,
+                    
+                },
+            },
+            {
+                path:"/brandSale/shoe",
+                component:Shoe,
+                meta:{
+                    flag:true,
+                    
+                },
+            }
+        ]
+    },
     {
         path:"/login",
         component:Login,
-        meta:{}
+        meta:{},
+        children:[
+            {
+                path:"/login/smalllogin",
+                component:SmallLogin,
+                meta:{
+                    flag:true,
+                    
+                },
+            },
+            {
+                path:"/login/smallregister",
+                component:SmallRegister,
+                meta:{
+                    flag:true,
+                    
+                },
+            }
+        ]
     },
     {
         path:"/shop",
