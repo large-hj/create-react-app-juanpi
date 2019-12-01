@@ -1,0 +1,56 @@
+.HeaderDiv{
+    width:100%;
+    height: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderDiv span{
+    color: #333;
+    font-size: 0.16rem;
+}
+.TitleDiv{
+    width: 100%;
+    height: 1.4rem;
+    background:#fafafa;
+    padding: 0 0.1rem;
+   
+}
+.TitleDiv .titleTop{
+    width: 100%;
+    height:0.8rem;
+    display:flex ;
+    justify-content: space-around;
+    align-items: center;
+}
+.TitleDiv .titleTop .shopLogo{
+    width: 20%;
+    height: 80%;
+    padding: 0.15rem 0rem;
+}
+.TitleDiv .titleTop .shopLogo img{
+    width: 100%;
+    height: 100%;
+}
+.TitleDiv .titleTop .shopInfo{
+    width: 60%;
+    height: 80%;
+    background: blue;
+    padding: 0.1rem;
+}
+.TitleDiv .titleTop .shouCang{
+    width: 20%;
+    height: 80%;
+    background: green;
+    padding: 0.1rem;
+}
+.TitleDiv .timeOut{
+    width: 100%;
+    height: 0.6rem;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 0.14rem;
+
+}
