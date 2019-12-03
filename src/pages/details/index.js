@@ -1,16 +1,26 @@
 import React, { Component, Fragment } from 'react'
 // import { Menu, ActivityIndicator, NavBar } from 'antd-mobile';
-import {TopBannerDiv,GoodsInfo,CouponDiv,AftersaleDiv,Div,HavechosenDiv,FooterDiv} from "./detailStyled"
+import {TopBannerDiv,GoodsInfo,CouponDiv,AftersaleDiv,Div,HavechosenDiv,FooterDiv} from "./detailStyled";
+import {withRouter} from "react-router-dom";
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "./mapStore";
+@connect(mapStateToProps, mapDispatchToProps)
+@withRouter
 // import { Carousel, WingBlank } from 'antd-mobile';
-export default class Details extends Component {
-    constructor() {
-        super()
+class Details extends Component {
+    constructor(props) {
+        super(props)
         this.state = {
             data: ['1', '2', '3'],
             imgHeight: 376,
         }
+        
+        
     }
+   
     componentDidMount() {
+       let {id}=this.props.match.params;
+       this.props.handleDetailAsync(id);
         // simulate img loading
         setTimeout(() => {
             this.setState({
@@ -19,6 +29,8 @@ export default class Details extends Component {
         }, 100);
     }
     render() {
+        let {detailList}=this.props;
+        console.log(detailList)
         return (
             <Fragment>
 <Div>
@@ -101,4 +113,6 @@ export default class Details extends Component {
             </Fragment>
         )
     }
+
 }
+export default Details;

@@ -2,13 +2,14 @@ import { Brand, Sale,Type } from "./styled"
 import {NavLink} from "react-router-dom"
 import React from "react";
 // import {handPikAction} from "../../action/juanpiAction";
-
+import {withRouter} from "react-router-dom";
+@withRouter
 class BrandSale extends React.Component {
     render() {
         return (
             <Brand>
                 <Sale>
-                    <i className="iconfont icon1">&#xe602;</i>
+                    <i className="iconfont icon1" onClick={this.handleTo.bind(this)}>&#xe602;</i>
                     <span className="title">品牌特卖</span>
                 </Sale>
                 <Type>
@@ -22,9 +23,9 @@ class BrandSale extends React.Component {
             </Brand>
         )
     }
-    // handleHandPik(){
-    //     store.dispatch(handPikAction());
-    // }
+    handleTo(){
+        this.props.history.push("/home")
+    }
 }
 
 export default BrandSale;

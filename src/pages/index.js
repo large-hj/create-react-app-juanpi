@@ -62,6 +62,11 @@ export const Details=Loadable({
     loader:()=>import("./details"),
     loading:Loading
 })
+//注册
+export const Register=Loadable({
+    loader:()=>import("./register"),
+    loading:Loading
+})
 //登录二级路由
 export const SmallLogin=Loadable({
     loader:()=>import("./smalllogin"),
@@ -81,10 +86,17 @@ export const Handpik=Loadable({
     loader:()=>import("../components/brandSales/handpik"),
     loading:Loading
 })
+//鞋子列表页
 export const Shoe=Loadable({
     loader:()=>import("../components/brandSales/shoe"),
     loading:Loading
 })
+//鞋子详情页
+export const ShoeDetail=Loadable({
+    loader:()=>import("./shoeDetail"),
+    loading:Loading
+})
+
 export const BeautyMakeup=Loadable({
     loader:()=>import("../components/brandSales/beautyMakeup"),
     loading:Loading

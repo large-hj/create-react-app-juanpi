@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const HandBox = styled.div`
     width:100%;
-    height: 100%;
+    height: 7rem;
     overflow-y:auto;
     display:flex;
     flex-direction:column;
+    .box{
+        height:30rem;
+    }
     .pic1{
         height: 0.29rem;
         img{

@@ -4,7 +4,7 @@ export const mapStateToProps=(state)=>({
 })
 
 export const mapDispatchToProps=(dispatch)=>({
-    handleshoeListAsync(){
-        dispatch(shoeListAsyncAction())
+    handleshoeListAsync(page){
+        dispatch(shoeListAsyncAction(page))
     }
 })

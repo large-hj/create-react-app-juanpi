@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
+
     width:100%;
     height:100%;
     flex-direction:column;
     display:flex;
     overflow-y:auto;
     padding:0.13rem;
+    
     .head{
         width:100%;
         height: 0.44rem;
@@ -30,11 +32,12 @@ export const Box = styled.div`
         height: 0.45rem;
         display:flex;
         border-bottom:0.002rem solid #ccc;
-        .icon1{
+        .icons{
             width:0.164rem;
             height: 0.164rem;
             color:#fff;
-            border:0.002rem solid #ccc;
+            font-size:0.16rem;
+            border:0.004rem solid #ccc;
             border-radius:100%;
         }
         .pic{
@@ -57,7 +60,7 @@ export const Box = styled.div`
 // 商品列表
 export const OneProduct = styled.div`
         width:100%;
-        height: 1.585rem;
+        min-height: 1.585rem;
         display:flex;
         flex-direction:column;
         font-size:0.14rem;
@@ -114,11 +117,12 @@ export const List = styled.div`
         .select{
             height:100%;
             width:0.31rem;
-            line-height:1.225rem;
+          margin-top:0.4rem;
             .icon2{
-                width:0.164rem;
+            width:0.164rem;
             height: 0.164rem;
             color:#fff;
+            font-size:0.16rem;
             border:0.004rem solid #ccc;
             border-radius:100%;
             }
@@ -141,12 +145,15 @@ export const List = styled.div`
             .p1{
                 font-size:0.14rem;
                 color:#333333;
+                overflow: hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
             }
             .p2{
                 font-size:0.14rem;
                 color:#BBBBBB;
                 width:1.58rem;
-                overflow: hidden;
+          
                 white-space:nowrap;
                 text-overflow:ellipsis;
             }
@@ -160,17 +167,12 @@ export const Price = styled.div`
       .newprice{
           color:#FF464E;
           font-size:0.12rem;
-          margin-top:0.2rem;
+       
       }
-      .oldprice{
-          color:#999999;
-          font-size:0.12rem;
-          margin-top:0.2rem;
-          margin-left:0.1rem;
-      }
+    
       .num{
           margin-left:0.5rem;
           color:#666666;
-          margin-top:0.1rem;
+        
       }
 `

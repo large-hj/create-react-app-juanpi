@@ -2,20 +2,30 @@ import React, { Component, Fragment } from 'react'
 import { HandBox, Times, Seckill, Play, Product } from "./styled"
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "./mapStore"
-
+import BscrollCom from "../../../common/bscroll";
 @connect(mapStateToProps, mapDispatchToProps)
 class Handpik extends Component {
+     constructor(){
+    super();
+
+    this.page=2;
+  }
     render() {
         let { brandarr, brandList } = this.props;
         return (
 
             <HandBox>
+                 <BscrollCom ref="scroll">
+                     <div className="box">
+
                 <div className="pic1"><img src="http://goods3.juancdn.com/act/180125/4/c/5a6984fb8150a12cfa77daf2_1080x98.png" alt="" /></div>
                 <Times>
                     <span className="span">10:00</span>
                     <span className="span">13:00</span>
                     <span className="span">20:00</span>
                 </Times>
+               
+
                 <Seckill>
                     {
 
@@ -33,6 +43,7 @@ class Handpik extends Component {
                         ))
                     }
                 </Seckill>
+                
                 <Play>
                     <i></i>
                     <span>大牌狂欢齐嗨购</span>
@@ -63,15 +74,40 @@ class Handpik extends Component {
                         ))
                     }
                 </Product>
+                     </div>
+                </BscrollCom>
             </HandBox>
         )
     }
 
     //请求数据
-    componentDidMount() {
-        // handlehandPikAsync是mapstore.js里的dispatch提供的
-        this.props.handlehandPikAsync();
-        this.props.handlehandPikListAsync();
+    // componentDidMount() {
+    //     // handlehandPikAsync是mapstore.js里的dispatch提供的
+    //     this.props.handlehandPikAsync();
+    //     this.props.handlehandPikListAsync();
+    // }
+    componentWillUpdate(){
+        this.refs.scroll.handlefinishPullUp();
     }
+      componentDidMount() {
+        this.props.handlehandPikAsync();
+        this.handleAsyncData();
+        //上拉加载
+        this.refs.scroll.handlepullingUp(()=>{
+          this.handleAsyncData();
+    
+        })
+      }
+      handleAsyncData(){
+        this.props.handlehandPikListAsync(this.page);
+       if(this.page<7){
+           this.page++;
+       }else if(this.page===9){
+           this.setState({
+               page:2
+           })
+           return this.handleAsyncData();
+       }
+      }
 }
 export default Handpik;

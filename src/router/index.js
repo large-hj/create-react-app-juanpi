@@ -13,7 +13,9 @@ import {
     Handpik,
     Shoe,
     Mandress,
-    Womenadress
+    Womenadress,
+    Register,
+    ShoeDetail
 
 } from "pages"
 
@@ -155,6 +157,16 @@ export const NoTabBarRoute = [
         ]
     },
     {
+        path:"/register",
+        component:Register,
+        meta:{},
+    },
+    {
+        path:"/shoeDetail/:goods_id",
+        component:ShoeDetail,
+        meta:{},
+    },
+    {
         path:"/shop",
         component:Shop,
         meta:{
@@ -192,7 +204,7 @@ export const NoTabBarRoute = [
 
     },
     {
-        path:"/details",
+        path:"/details/:id",
         component:Details,
         meta:{
             flag:false,

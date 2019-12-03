@@ -41,5 +41,4 @@ export const LeftNav = styled.div`
 export const RightList = styled.div`
    width:2.4rem;
     height:6rem;
-    background:pink;
 `

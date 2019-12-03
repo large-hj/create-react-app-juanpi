@@ -1,6 +1,8 @@
 import React from "react";
 import {Box,Top,Select} from "./styled"
 import {NavLink} from "react-router-dom";
+import {withRouter} from "react-router-dom";
+@withRouter
 class Login extends React.Component{
    
     render(){
@@ -11,7 +13,7 @@ class Login extends React.Component{
                <Top>
                     <i className="iconfont">&#xe602;</i>
                     <h2>登录</h2>
-                    <span>注册</span>
+                    <span onClick={this.handleTo.bind(this)}>注册</span>
                 </Top>
                 <Select>
                         <ul>
@@ -23,6 +25,9 @@ class Login extends React.Component{
                
             </div>
         )
+    }
+    handleTo(){
+        this.props.history.push("/register")
     }
    
 }

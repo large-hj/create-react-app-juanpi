@@ -13,7 +13,7 @@ export default (routes) => {
                 </Layout>
             )
         } else {
-            return <route.component />
+            return <route.component/>
         }
     }
 
@@ -37,7 +37,7 @@ export default (routes) => {
         return <Route path={childNodes.path} key={childNodes.path} render={() => {
             return (
                 <Fragment>
-                    <Route component={childNodes.component} />
+                    <Route component={childNodes.component }/>
                     <Switch>
                         {
                             childNodes.children.map((child) => {

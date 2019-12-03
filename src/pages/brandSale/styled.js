@@ -13,7 +13,8 @@ export const Sale=styled.div`
     display:flex;
     line-height:0.38rem;
     .icon1{
-        margin-left:0.12rem;
+        margin-left:0.14rem;
+        font-size:0.14rem;
         color:#333333;
     }
     .title{

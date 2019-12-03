@@ -13,7 +13,7 @@ export const mapDispatchToProps = (dispatch)=>({
         dispatch(handPikAsyncAction())
     },
     //list
-    handlehandPikListAsync(){
-        dispatch(handPikListAsyncAction())
+    handlehandPikListAsync(page){
+        dispatch(handPikListAsyncAction(page))
     }
 })
