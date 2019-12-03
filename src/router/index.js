@@ -155,7 +155,7 @@ export const NoTabBarRoute = [
         ]
     },
     {
-        path:"/shop",
+        path:"/shop/:brand",
         component:Shop,
         meta:{
             flag:false,
@@ -165,7 +165,7 @@ export const NoTabBarRoute = [
             
 
             {
-                path:"/shop/first",
+                path:"/shop/:brand/first",
                 component:ShopFirst,
                
                 meta:{
@@ -173,14 +173,14 @@ export const NoTabBarRoute = [
                 }
             },
             {
-                path:"/shop/second",
+                path:"/shop/:brand/second",
                 component:ShopSecond,
                 meta:{
                     flag:true,
                 }
             },
             {
-                path:"/shop/third",
+                path:"/shop/:brand/third",
                 component:ShopThird,
                 meta:{
                     flag:true,
@@ -192,7 +192,7 @@ export const NoTabBarRoute = [
 
     },
     {
-        path:"/details",
+        path:"/details/:goods_id",
         component:Details,
         meta:{
             flag:false,

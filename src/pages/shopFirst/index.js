@@ -1,24 +1,40 @@
-import React, { Component,Fragment } from 'react'
-
-import {BoxDiv} from "./shopFirstStyled"
-export default class ShopFirst extends Component {
+import React, { Component, Fragment } from 'react'
+import { connect } from "react-redux";
+import { BoxDiv } from "./shopFirstStyled"
+import { mapStateToProps, mapDispatchToProps } from "../shop/mapStore"
+import { withRouter } from "react-router-dom"
+@connect(mapStateToProps, mapDispatchToProps)
+@withRouter
+class ShopFirst extends Component {
     render() {
+        let { brandInfo, floor_data } = this.props
+    
+       let MAP = floor_data
+        // console.log(floor_data, 1)
         return (
             <Fragment>
                 <BoxDiv className="Box">
                     <div className="title">
-                        <span>——129元2双——</span>
+        <span>dai</span>
                     </div>
-                    <div>
-                        <div className="img">
-                            <img src="https://goods7.juancdn.com/goods/180627/c/3/5b32789133b089442d1bf823_800x800.jpg" alt=""/>   
-                        </div>
-                        
-                         <i>￥169.9 <span>￥859</span></i>
-                         <p>Ami几件宽松毛衣</p>
-                    </div>
+                    {
+                        MAP.map((item,index) => (
+                            <div key={index}>
+                                <div className="img">
+                                    <img src={item.pic_url} alt="" />
+                                </div>
+
+                                <i>￥{item.cprice} <span>￥{item.oprice}</span></i>
+                        <p>{item.title}</p>
+                            </div>
+                        ))
+                    }
                 </BoxDiv>
+
+
+
             </Fragment>
         )
     }
 }
+export default ShopFirst

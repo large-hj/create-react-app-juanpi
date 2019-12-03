@@ -4,6 +4,10 @@ export const TopBannerDiv = styled.div`
     width: 100%;
     height: 3.2rem;
     background: #ccc;
+    img{
+        width:100%;
+        height:100%;
+    }
     
 `
 export const Div = styled.div`
@@ -83,15 +87,44 @@ export const AftersaleDiv = styled.div`
 export const HavechosenDiv = styled.div`
     width: 100%;
     height: 0.4rem;
-    background: #fff;
-    border-bottom:1px solid #ccc;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 0 0.1rem;
-    font-size:0.14rem;
-    color: #333;
-    margin:0.1rem 0;
+   
+  
+        .am-accordion .am-accordion-item .am-accordion-header {
+    position: relative;
+    color: #000;
+    font-size: 0.16rem;
+    height: 122px;
+    line-height: 122px;
+    background-color: #ccc;
+    border-bottom: 1PX solid #ddd;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  
+    
+    .my-list{
+        font-size:0.16rem;
+    }
+    .my-accordion .pad .am-accordion-content-box {
+        padding: 10px;
+}
+.am-list-item .am-list-line .am-list-content {
+    flex: 1 1;
+    color: #000;
+    font-size: 0.16rem;
+    line-height: 1.5;
+    text-align: left;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid #ccc;
+    margin-top: 0.1rem;
+}
 
     
 `

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 // import {PageContainer} from "common/styled"
 import {
     SearchDiv, BannerDiv, NavDiv, JuanpiBannerDiv, JuanpGipzikDiv,
-    JuanpiEqWGtTDiv, ContainerNavDiv
+    JuanpiEqWGtTDiv, ContainerNavDiv,FragmentDiv
 } from "./homeStyled";
 import { Carousel, WingBlank } from 'antd-mobile';
 
@@ -15,9 +15,9 @@ import { withRouter,NavLink } from "react-router-dom";
 class Home extends Component {
     constructor(props) {
         super(props)
-
+      
         this.state = {
-            data: ['1', '2', '3'],
+            data:'',
             imgHeight: 176,
             
         }
@@ -25,20 +25,20 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        // simulate img loading
-        setTimeout(() => {
-            this.setState({
-                data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-            });
-        }, 100);
-        let { zy_ids, app_name, catname } = this.props;
+          let { zy_ids, app_name, catname } = this.props;
         this.props.handleAsyncHome(zy_ids, app_name, catname, this.page);
+        // console.log(this.props.slide_ads)
+      
+      
     }
     render() {
-        let { multi_block, zg_event, zg_banner, zg_event1 } = this.props;
+        let { multi_block, zg_event, zg_banner, zg_event1,slide_ads } = this.props;
+
         return (
             <Fragment>
+            <FragmentDiv>
 
+          
                 <SearchDiv>
                     <div className="input">
                         <span className="iconfont">&#xe613;</span>
@@ -50,7 +50,7 @@ class Home extends Component {
                     </div>
                 </SearchDiv>
                 <BannerDiv>
-                    {/* <WingBlank>
+                    <WingBlank>
                         <Carousel className="space-carousel"
                             frameOverflow="visible"
                             cellSpacing={0}
@@ -60,10 +60,11 @@ class Home extends Component {
                             //   beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                             afterChange={index => this.setState({ slideIndex: index })}
                         >
-                            {this.state.data.map((val, index) => (
+                            {
+                            slide_ads.map((val, index) => (
                                 <a
                                     key={val}
-                                    href="http://www.alipay.com"
+                                    href={val.jump_url}
                                     style={{
                                         display: 'block',
                                         position: 'relative',
@@ -75,7 +76,7 @@ class Home extends Component {
                                     }}
                                 >
                                     <img
-                                        src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
+                                        src={val.pic}
                                         alt=""
                                         style={{ width: '100%', height: '1.75rem', verticalAlign: 'top' }}
                                         onLoad={() => {
@@ -87,7 +88,7 @@ class Home extends Component {
                                 </a>
                             ))}
                         </Carousel>
-                    </WingBlank> */}
+                    </WingBlank>
 
                 </BannerDiv>
 
@@ -148,16 +149,16 @@ class Home extends Component {
                     </NavLink>
 
                 </ContainerNavDiv>
-
+                </FragmentDiv>
             </Fragment>
         )
     }
     handleTo(index){
-      if(index==0){
+      if(index===0){
 
-      }else if(index==1){
+      }else if(index===1){
 
-      }else if(index=2){
+      }else if(index===2){
         this.props.history.push("/brandSale")
       }else{
 
