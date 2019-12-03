@@ -7,4 +7,11 @@ module.exports  = (app)=>{
             "^/ajax":""
         }
     }))
+    app.use("/api",proxy({
+        target:"http://localhost:3000",
+        changeOrigin:true,
+        pathRewrite:{
+            "^/api":""
+        }
+    }))
 }

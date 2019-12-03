@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+export const FragmentDiv = styled.div`
+ 
+    
+`
 export const SearchDiv = styled.div`
     width:100%;
     height:0.6rem;

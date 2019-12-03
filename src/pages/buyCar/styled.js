@@ -60,7 +60,7 @@ export const Box = styled.div`
 // 商品列表
 export const OneProduct = styled.div`
         width:100%;
-        min-height: 1.585rem;
+        min-height: 1.6rem;
         display:flex;
         flex-direction:column;
         font-size:0.14rem;
@@ -109,7 +109,7 @@ export const Lists = styled.div`
 `
 export const List = styled.div`
         width:100%;
-        height: 1.225rem;
+        min-height: 1.225rem;
         display:flex;
         padding-top:0.12rem;
         padding-bottom:0.12rem;
@@ -143,7 +143,7 @@ export const List = styled.div`
             display:flex;
             flex-direction:column;
             .p1{
-                font-size:0.14rem;
+                font-size:0.12rem;
                 color:#333333;
                 overflow: hidden;
                 white-space:nowrap;
@@ -153,7 +153,7 @@ export const List = styled.div`
                 font-size:0.14rem;
                 color:#BBBBBB;
                 width:1.58rem;
-          
+              
                 white-space:nowrap;
                 text-overflow:ellipsis;
             }
@@ -167,12 +167,23 @@ export const Price = styled.div`
       .newprice{
           color:#FF464E;
           font-size:0.12rem;
-       
       }
-    
+      
       .num{
-          margin-left:0.5rem;
-          color:#666666;
-        
+        width:100%;
+        height:0.3rem;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        div{
+            width: 33%;
+            height:80%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#E5E5E5;
+            border-radius:0.05rem;
+        }
+
       }
 `

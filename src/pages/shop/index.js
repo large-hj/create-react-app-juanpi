@@ -1,23 +1,41 @@
 import React, { Component, Fragment } from 'react'
-// import {NavLink} from "react-router-dom";
 import {HeaderDiv,TitleDiv,ContainerNavDiv} from "./shopStyled"
-
-export default class Shop extends Component {
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "./mapStore"
+import {withRouter} from "react-router-dom"
+@connect(mapStateToProps, mapDispatchToProps)
+@withRouter
+class Shop extends Component {
+    constructor(props){
+        super(props);
+        this.page=1;
+  
+    }
+    componentDidMount() {
+       let {brand}=this.props.match.params;
+       
+       this.props.handleAsyncHome(this.page, brand);
+        
+     
+    }
     render() {
+        let {brandInfo,floor_bar} =this.props
+    // console.log(floor_bar)
         return (
             <Fragment>
                     <HeaderDiv>
-                        <span>巴布豆时尚童鞋冬季专场</span>
+                        <span>{brandInfo.shop_name}</span>
                     </HeaderDiv>
 
                     <TitleDiv>
                         <div className="titleTop">
                             <div className="shopLogo">
-                                <img src="https://goods8.juancdn.com/seller/180309/f/e/5aa259768150a15a4d4fb0a4_180x90.png" alt=""/>
+                           
+                                <img src={brandInfo.logo_url} alt=""/>
                             </div>
                             <div className="shopInfo" >
-                                <span >巴布豆时尚童鞋冬季专场</span>
-                                <span className="count">共93件商品</span>
+                                <span >{brandInfo.shop_name}</span>
+                                    <span className="count">{brandInfo.store_info}</span>
                             </div>
                             <div className="shouCang" >
                                 
@@ -30,15 +48,13 @@ export default class Shop extends Component {
                         </div>
                     </TitleDiv>
                     <ContainerNavDiv>
-                        <span to="/shop/first" className="span" onClick={this.handleFirst.bind(this)}>
-                            <span>129元2双</span>
+                        {
+                            floor_bar.map((item,index)=>(
+                            <span to="/shop/first" className="span" onClick={this.handleFirst.bind(this)} key={index} >
+                            <span>{item.title}</span>
                         </span>
-                        <span  to="/shop/second" className="span" onClick={this.handleSecond.bind(this)}>
-                            <span>89元2双</span>
-                        </span>
-                        <span  to="/shop/third" className="span" onClick={this.handleThird.bind(this)}>
-                            <span>109元2双</span>
-                        </span>
+                            ))
+                        }
                     </ContainerNavDiv>
             </Fragment>
         )
@@ -46,10 +62,6 @@ export default class Shop extends Component {
     handleFirst(){
         this.props.history.push("/shop/first")
     }
-    handleSecond(){
-        this.props.history.push("/shop/second")
-    }
-    handleThird(){
-        this.props.history.push("/shop/third")
-    }
+
 }
+export default  Shop

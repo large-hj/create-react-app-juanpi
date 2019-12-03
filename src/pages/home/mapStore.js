@@ -5,6 +5,7 @@ export const mapStateToProps = (state)=>({
     zg_event:state.home.zg_event,
     zg_event1:state.home.zg_event1,
     zg_banner:state.home.zg_banner,
+    slide_ads:state.home.slide_ads,
 
     // 固定值
     zy_ids: state.user.zy_ids,

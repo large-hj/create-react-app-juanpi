@@ -79,9 +79,13 @@ export const ContainerNavDiv = styled.div`
     justify-content:flex-start;
     align-items:center;
     padding-left:0.1rem;
+    overflow:hidden;
+  
     .span{
-        font-size:0.16rem;
-        margin-left:0.2rem;
+        font-size:0.12rem;
+        margin-left:0.1rem;
+        width:20%;
+        overflow: hidden;
         color:#333;
        
     }
