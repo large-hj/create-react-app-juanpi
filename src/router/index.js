@@ -15,7 +15,7 @@ import {
     Mandress,
     Womenadress,
     Register,
-    ShoeDetail
+    ShoeDetail,Search
 
 } from "pages"
 
@@ -196,6 +196,15 @@ export const NoTabBarRoute = [
     {
         path:"/details/:goods_id",
         component:Details,
+        meta:{
+            flag:false,
+          
+        },
+
+    },
+    {
+        path:"/search",
+        component:Search,
         meta:{
             flag:false,
           

@@ -1,6 +1,6 @@
-import {handPikAsyncType,handPikListAsyncType,shoeListAsyncType,beautyListAsyncType,detailAsyncType,idAsyncType} from "./actionsTypes";
+import {handPikAsyncType,handPikListAsyncType,shoeListAsyncType,beautyListAsyncType,detailAsyncType,idAsyncType,registerType,searchType} from "./actionsTypes";
 import {createAction} from "redux-actions";
-import {handPikApi,handPikListApi,shoeListApi,beautyListApi,detailApi,idApi} from "../../api/brand";
+import {handPikApi,handPikListApi,shoeListApi,beautyListApi,detailApi,idApi,registerApi,searchApi} from "../../api/brand";
 //handPikAsyncAction在组件handpik中的mapStore中调用
 export const handPikAsyncAction=()=>{
     let handPikAction = createAction(handPikAsyncType,(data)=>({data:data}));
@@ -46,3 +46,30 @@ export const idAsyncAction=(goods_id,sa_id)=>{
         dispatch(idAction(data))
     }
 }
+//注册
+export const registerAsyncAction=(username,password)=>{
+    let registerAction=createAction(registerType,(data)=>({data:data}));
+    return async (dispatch)=>{
+        let data=await registerApi(username,password)
+        console.log(data)
+        dispatch(registerAction(data))
+    }
+}
+//查询.
+export const searchAsyncAction=(keyword)=>{
+    let searchAction=createAction(searchType,(data)=>({data:data}));
+    return async (dispatch)=>{
+        let data=await searchApi(keyword)
+        console.log(data)
+        dispatch(searchAction(data))
+    }
+}
+
+
+// export const searchAsyncAction=(keyword)=>{
+//     // let searchAction=createAction(searchType,(data)=>({data:data}));
+//     return async (dispatch)=>{
+//         let data=await searchApi(keyword)
+//         // console.log(data)
+//     }
+// }

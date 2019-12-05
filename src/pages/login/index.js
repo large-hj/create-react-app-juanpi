@@ -18,7 +18,7 @@ class Login extends React.Component{
                 <Select>
                         <ul>
                             <NavLink to="/login/smalllogin" className="li">卷皮账号登录</NavLink>
-                            <NavLink to="/login/smallregister" className="li">手机快捷登录</NavLink>
+                            <NavLink to="/login/smallregister" className="li">注册账号</NavLink>
                         </ul>
                 </Select>
                </Box>

@@ -111,3 +111,8 @@ export const Mandress=Loadable({
     loader:()=>import("../components/sears/mandress"),
     loading:Loading
 })
+//搜索
+export const Search=Loadable({
+    loader:()=>import("./search"),
+    loading:Loading
+})

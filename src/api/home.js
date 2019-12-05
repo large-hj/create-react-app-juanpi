@@ -56,7 +56,7 @@ export const jpZcApi = (page, brand_id)=>http.get({
 
 // 用户登录接口
 export const userLoginApi = (name, password)=>http.post({
-    url:"/api/users.js/login",
+    url:"/api/users/login",
     data:{
         username: name,
         password: password,

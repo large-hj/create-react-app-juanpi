@@ -20,7 +20,7 @@ const get = (options) => {
             "content-type": "application/json",
             ...options.headers
         }
-    }).then(res => res.json());
+    }).then(res => res.json())
 
 
     return result;

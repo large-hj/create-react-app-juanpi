@@ -48,6 +48,20 @@
       "unicode_decimal": 58891
     },
     {
+      "icon_id": "479193",
+      "name": "箭头",
+      "font_class": "jiantou2",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "566360",
+      "name": "箭头",
+      "font_class": "jiantou3",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
       "icon_id": "690708",
       "name": "个人中心-订单-待收货",
       "font_class": "gerenzhongxindingdandaishouhuo",
@@ -69,11 +83,25 @@
       "unicode_decimal": 58918
     },
     {
+      "icon_id": "1115048",
+      "name": "箭头",
+      "font_class": "jiantou4",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
       "icon_id": "1151060",
       "name": "搜索列表2",
       "font_class": "sousuoliebiao2",
       "unicode": "e630",
       "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1164942",
+      "name": "向下箭头_实心",
+      "font_class": "xiangxiajiantoushixin",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
     },
     {
       "icon_id": "1172649",
@@ -139,6 +167,13 @@
       "unicode_decimal": 58898
     },
     {
+      "icon_id": "5324390",
+      "name": "手电筒",
+      "font_class": "shoudiantong",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
       "icon_id": "5449777",
       "name": "赞",
       "font_class": "zan",
@@ -153,6 +188,13 @@
       "unicode_decimal": 59203
     },
     {
+      "icon_id": "5979966",
+      "name": "实 向下箭头-01",
+      "font_class": "shixiangxiajiantou-",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
       "icon_id": "6822917",
       "name": "qq",
       "font_class": "qq",
@@ -165,6 +207,13 @@
       "font_class": "checkbox",
       "unicode": "e605",
       "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "7720065",
+      "name": "箭头",
+      "font_class": "jiantou5",
+      "unicode": "e611",
+      "unicode_decimal": 58897
     },
     {
       "icon_id": "8455606",

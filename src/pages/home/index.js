@@ -31,6 +31,9 @@ class Home extends Component {
       
       
     }
+    handleToSearch(){
+        this.props.history.push("/search")
+    }
     render() {
         let { multi_block, zg_event, zg_banner, zg_event1,slide_ads } = this.props;
 
@@ -40,7 +43,7 @@ class Home extends Component {
 
           
                 <SearchDiv>
-                    <div className="input">
+                    <div className="input" onClick={this.handleToSearch.bind(this)}>
                         <span className="iconfont">&#xe613;</span>
                         <span className="juanpi">卷皮</span>
                         <span className="search">搜索</span>
