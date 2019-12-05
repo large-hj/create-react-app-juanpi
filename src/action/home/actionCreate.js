@@ -66,3 +66,4 @@ export const getMemberAsyncAction = (goods_id,sa_id)=>{
         dispatch(getMemberAction(data))
     }
 }
+

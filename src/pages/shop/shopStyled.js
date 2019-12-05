@@ -52,10 +52,7 @@ export const TitleDiv = styled.div`
             display:flex;
             justify-content: center;
             align-items: center;
-            font-size:.4rem;
-         
-            
-            
+            font-size:.4rem;   
         }
     }
     .timeOut{
@@ -70,24 +67,21 @@ export const TitleDiv = styled.div`
 
     }
 `
-
-
 export const ContainerNavDiv = styled.div`
     width:100%;
     height:0.4rem;
     display:flex;
-    justify-content:flex-start;
+    justify-content:space-around;
     align-items:center;
-    padding-left:0.1rem;
-    overflow:hidden;
-  
+    padding-left:0.05rem;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    background:#ccc;
     .span{
         font-size:0.12rem;
-        margin-left:0.1rem;
-        width:20%;
-        overflow: hidden;
         color:#333;
-       
+        flex-shrink:0;
+        padding-right:0.1rem;
     }
     .active{
         color: #ff464e;

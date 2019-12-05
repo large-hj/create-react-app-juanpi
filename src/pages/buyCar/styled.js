@@ -7,8 +7,58 @@ export const Box = styled.div`
     flex-direction:column;
     display:flex;
     overflow-y:auto;
-    padding:0.13rem;
+
+    background:#f4f4f8;
     
+    .footer{
+        width:100%;
+        height:0.5rem;
+        background:#fff;
+        position:fixed;
+        bottom:0.5rem;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:0.14rem;
+        div:nth-child(1){
+            width:30%;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:0.16rem;
+            font-weight:bold;
+            input {
+            width: 0.15rem;
+            height: 0.3rem;
+            margin-left: 0.1rem;
+            }
+        }
+        div:nth-child(2){
+            width:40%;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:0.14rem;
+            font-weight:bold;
+            span{
+                color:#c33;
+                font-size:0.16rem;
+            }
+        }
+        div:nth-child(3){
+            width:30%;
+            height:100%;
+            background:#c33;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:0.14rem;
+            font-weight:bold;
+            color:#fff;
+        }
+    }
     .head{
         width:100%;
         height: 0.44rem;
@@ -114,18 +164,17 @@ export const List = styled.div`
         padding-top:0.12rem;
         padding-bottom:0.12rem;
         border-bottom:0.004rem solid #ccc;
+        background:#fff;
         .select{
             height:100%;
             width:0.31rem;
-          margin-top:0.4rem;
-            .icon2{
-            width:0.164rem;
-            height: 0.164rem;
-            color:#fff;
-            font-size:0.16rem;
-            border:0.004rem solid #ccc;
-            border-radius:100%;
-            }
+            margin-top:0.4rem;
+          input {
+            width: 0.15rem;
+            height: 0.3rem;
+            margin-left: 0.1rem;
+           
+}
         }
         .picture{
             width:0.9rem;

@@ -20,7 +20,9 @@ const get = (options) => {
             "content-type": "application/json",
             ...options.headers
         }
-    }).then(res => res.json());
+    }).then(res => res.json()).catch(function(err){
+        console.log(err)
+    });
 
 
     return result;
@@ -36,7 +38,10 @@ const post = (options) => {
             "content-type":"application/x-www-form-urlencoded",
             ...options.headers
         }
-    }).then(res=>res.json());
+    }).then(res=>res.json()).catch(function(err){
+        console.log(err)
+    });
+;
 
 
     return result;

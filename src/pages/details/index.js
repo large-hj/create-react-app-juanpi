@@ -57,7 +57,7 @@ class Details extends Component {
         let title=detailsDoods.title
         let mount=1;
         if (goods_id && cprice && goodsUrl && goods_id&&title) {
-            var shoping = { select: select, cprice: cprice, goodsUrl: goodsUrl,title:title,mount:mount };
+            var shoping = { select: select, cprice: cprice, goodsUrl: goodsUrl,title:title,mount:mount,checked:false };
             localStorage.setItem(goods_id, JSON.stringify(shoping));
             this.props.history.push("/buycar")
         } else {

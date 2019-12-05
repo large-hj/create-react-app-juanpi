@@ -20,6 +20,7 @@ import {withRouter} from "react-router-dom"
     render() {
       
         let { getGoodsZc} = this.props;
+      
         return ( //https://m.juanpi.com/brand/1629495?shop_id=5614944"
             <Fragment>
                 <BoxDiv className="Box">

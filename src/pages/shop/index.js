@@ -20,7 +20,7 @@ class Shop extends Component {
     }
     render() {
         let {brandInfo,floor_bar} =this.props
-    // console.log(floor_bar)
+    console.log(floor_bar)
         return (
             <Fragment>
                     <HeaderDiv>
@@ -50,8 +50,8 @@ class Shop extends Component {
                     <ContainerNavDiv>
                         {
                             floor_bar.map((item,index)=>(
-                            <span to="/shop/first" className="span" onClick={this.handleFirst.bind(this)} key={index} >
-                            <span>{item.title}</span>
+                            <span  className="span"  key={index} >
+                           {item.title}
                         </span>
                             ))
                         }
@@ -59,9 +59,7 @@ class Shop extends Component {
             </Fragment>
         )
     }
-    handleFirst(){
-        this.props.history.push("/shop/first")
-    }
+   
 
 }
 export default  Shop

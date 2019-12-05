@@ -1,4 +1,5 @@
 import http from "../utils/request"
+import axios from "axios";
 // getIndexNavSkip
 export const getIndexNavSkipApi = (zy_ids,app_name,catname,page)=>http.get({
     url:"/ajax/api/getIndexNavSkip",
@@ -85,3 +86,14 @@ export const getMemberApi=(goods_id,sa_id)=>http.get({
     }
 })
 
+export const HotMovieApi=()=>axios({
+    method:"get",
+    url:"/api/getGoods",
+    params:{
+        page:1,
+        zy_ids: "p8_c4_l4",
+        app_name: "zhe",
+        catname: "tab_hpzc",
+        flag: "tab_hpzc",
+    }
+})

@@ -15,7 +15,6 @@ class ShopFirst extends Component {
             <Fragment>
                 <BoxDiv className="Box">
                     <div className="title">
-        <span>dai</span>
                     </div>
                     {
                         MAP.map((item,index) => (

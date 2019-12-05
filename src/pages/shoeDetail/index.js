@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "./mapStore";
 import { Accordion, List } from 'antd-mobile';
-import cookie from 'react-cookies'
+
 @connect(mapStateToProps, mapDispatchToProps)
 @withRouter
 // import { Carousel, WingBlank } from 'antd-mobile';
@@ -22,7 +22,6 @@ constructor(){
 }
 
     componentDidMount() {
-        cookie.save('token','123ghj')
         let { goods_id } = this.props.match.params;
         let { detailList } = this.props;
         this.props.handleDetailAsync(goods_id);
